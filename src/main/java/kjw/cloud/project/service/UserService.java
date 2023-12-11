@@ -14,7 +14,6 @@ public class UserService {
     private final PasswordEncoder passwordEncoder;
     @Transactional
     public boolean save(User user){
-        user.setPassword(passwordEncoder.encode(user.));
         return !userRepository.save(user).getUserId().isEmpty();
     }
 }
